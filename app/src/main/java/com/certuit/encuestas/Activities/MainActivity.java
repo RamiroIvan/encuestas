@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.certuit.encuestas.Modelo.Reunion;
 import com.certuit.encuestas.R;
 import com.certuit.encuestas.Util.RestClient;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -23,33 +27,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //new descargarReunionesAsyncTask().execute();
+        new verificarLoginAsyncTask().execute();
     }
 
 
-    private class descargarReunionesAsyncTask extends AsyncTask<Void, Void, Void> {
+    private class verificarLoginAsyncTask extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            Log.i("Iniciando","Iniciando ejecución");
+            Log.i("Iniciando", "Iniciando ejecución");
         }
 
         @Override
         protected Void doInBackground(Void... params) {
 
-            Log.i("Descargando","Descargando información");
+            Log.i("Descargando", "Descargando información");
 
-            RestClient.get().getReuniones(new Callback<List<Reunion>>() {
+            JSONObject obj = new JSONObject();
+            try {
+                obj.put("method", "get_session_key");
+                JSONObject usuario = new JSONObject();
+                usuario.put("username", "admin");
+                usuario.put("password", "9ZTsZ2UW");
+                obj.put("params", usuario);
+                obj.put("id", "1");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            Log.i("json",obj.toString());
+
+            RestClient.get().auteticacion(obj, new Callback<JSONObject>() {
+
+
                 @Override
-                public void success(List<Reunion> reuniones, Response response) {
-                    if (response.getStatus() == 200){
-                        for(Reunion reunion : reuniones){
-                            Log.i("Reu",
-                                    "Id: " + reunion.getId() + " --- " + "Nombre" + reunion.getNombre()
-                                            + " --- " + "Lugar" + reunion.getLugar() + " --- " + "Fecha" + reunion.getInicio()
-                            );
-                        }
+                public void success(JSONObject json, Response response) {
+                    if (response.getStatus() == 200) {
+                        Log.i("OK", json.toString());
+
                     }
                 }
 
@@ -86,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         case NETWORK:
                             Log.i("Aplicacion", "NETWORK");
                             mensaje = "Verifique su conexión a internet";
-                            Log.i("Error",mensaje);
+                            Log.i("Error", mensaje);
                             break;
 
                         case UNEXPECTED:
@@ -106,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Log.i("Finish","Finalizó la ejecución");
+            Log.i("Finish", "Finalizó la ejecución");
         }
     }
 }

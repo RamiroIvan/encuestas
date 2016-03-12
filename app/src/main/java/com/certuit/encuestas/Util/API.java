@@ -1,13 +1,16 @@
 package com.certuit.encuestas.Util;
 
-import java.util.List;
+import com.certuit.encuestas.Modelo.Login;
+import com.google.gson.JsonObject;
+import com.squareup.okhttp.Call;
+
+import org.json.JSONObject;
 
 import retrofit.Callback;
+import retrofit.http.Body;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
-import retrofit.http.GET;
 import retrofit.http.POST;
-import com.certuit.encuestas.Modelo.Reunion;
 
 
 /**
@@ -15,9 +18,8 @@ import com.certuit.encuestas.Modelo.Reunion;
  */
 public interface API {
 
-    @GET("/reuniones?date=18/01/2016")
-    void getReuniones( Callback<List<Reunion>> callback);
-
+    @POST("/")
+    void auteticacion(@Body JSONObject autenticacion, Callback<JSONObject> callback);
 
 
 }

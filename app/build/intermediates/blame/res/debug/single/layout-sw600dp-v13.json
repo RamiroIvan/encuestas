@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/ivane/Documents/Programas Android Studio/Encuestas/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/layout_snackbar.xml",
+        "source": "/Users/ivane/Documents/Programas Android Studio/Encuestas/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/layout-sw600dp/layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/layout_snackbar.xml",
+        "source": "/Users/ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/layout-sw600dp/layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/layout_snackbar.xml",
+        "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/layout-sw600dp/layout_snackbar.xml"
+    }
+]

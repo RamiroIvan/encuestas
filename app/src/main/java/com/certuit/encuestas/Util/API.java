@@ -1,15 +1,10 @@
 package com.certuit.encuestas.Util;
 
-import com.certuit.encuestas.Modelo.Login;
 import com.google.gson.JsonObject;
-import com.squareup.okhttp.Call;
-
-import org.json.JSONObject;
 
 import retrofit.Callback;
 import retrofit.http.Body;
-import retrofit.http.Field;
-import retrofit.http.FormUrlEncoded;
+import retrofit.http.Headers;
 import retrofit.http.POST;
 
 
@@ -18,8 +13,12 @@ import retrofit.http.POST;
  */
 public interface API {
 
+    @Headers({
+            "Content-Type: application/json",
+            "Connection: Keep-Alive"
+    })
     @POST("/")
-    void auteticacion(@Body JSONObject autenticacion, Callback<JSONObject> callback);
+    void auteticacion(@Body JsonObject autenticacion, Callback<Object> callback);
 
 
 }

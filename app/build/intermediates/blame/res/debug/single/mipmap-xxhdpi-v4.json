@@ -1,11 +1,15 @@
 [
     {
+        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
         "source": "/Users/ivane/Desktop/Encuestas/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
-        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/Users/andre/Documents/Proyectos/Android/encuestas/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/andre/Documents/Proyectos/Android/encuestas/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/ivane/Documents/Programas Android Studio/Encuestas/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",

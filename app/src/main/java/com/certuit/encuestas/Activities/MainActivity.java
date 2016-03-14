@@ -6,13 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.certuit.encuestas.R;
-import com.certuit.encuestas.Util.RestClient;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
+import com.certuit.limesurvey.client.LimeSurveyClient;
+import com.certuit.limesurvey.model.Group;
+import com.certuit.limesurvey.model.LimeSurveyJsonObject;
+import com.certuit.limesurvey.model.Question;
+import com.certuit.limesurvey.model.Survey;
+import com.certuit.limesurvey.model.User;
+import com.certuit.limesurvey.service.QuestionService;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
-import org.json.JSONObject;
+
+import java.util.List;
 
 import retrofit.Callback;
 import retrofit.RetrofitError;
@@ -42,33 +47,27 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
 
             Log.i("Descargando", "Descargando información");
-
-            String jsonStr = "{\"username\": \"admin\",\"password\": \"9ZTsZ2UW\"}";
-
-            Gson gson = new Gson();
-            JsonElement element = gson.fromJson (jsonStr, JsonElement.class);
-            JsonObject obj = new JsonObject();
+            User userAuth=new User("admin","9ZTsZ2UW");
+            JsonObject postData= null;
             try {
-                obj.addProperty("method", "get_session_key");
-                JSONObject usuario = new JSONObject();
-                usuario.put("username", "admin");
-                usuario.put("password", "9ZTsZ2UW");
-                obj.add("params", element);
-                obj.addProperty("id", "1");
+                Survey survey=new Survey();
+                survey.setSid("20");
+                Group group=new Group();
+                group.setGid("3");
+                postData = QuestionService.getJsonListQuestions(survey,group, "j2uq6giuxi2y22cxtz7djfm5yhsb4wvv","es");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
+            Log.i("json",postData.toString());
 
-            Log.i("json",obj.toString());
-
-            RestClient.get().auteticacion(obj, new Callback<Object>() {
+            LimeSurveyClient.get().listQuestions(postData, new Callback<LimeSurveyJsonObject<List<Question>>>() {
 
 
                 @Override
-                public void success(Object json, Response response) {
+                public void success(LimeSurveyJsonObject<List<Question>> json, Response response) {
                     if (response.getStatus() == 200) {
-                        Log.i("OK", json.toString());
+                        Log.i("OK", json.getResults().toString());
 
                     }
                 }

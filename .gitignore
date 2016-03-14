@@ -13,6 +13,8 @@ bin/
 gen/
 out/
 app/build
+.idea/workspace.xml
+
 # Gradle files
 .gradle/
 build/

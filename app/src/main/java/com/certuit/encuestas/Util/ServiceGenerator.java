@@ -3,6 +3,7 @@ package com.certuit.encuestas.Util;
 import com.squareup.okhttp.OkHttpClient;
 
 import retrofit.RestAdapter;
+import retrofit.android.AndroidLog;
 import retrofit.client.OkClient;
 
 /**
@@ -17,7 +18,7 @@ public class ServiceGenerator {
     public static <S> S createService(Class<S> serviceClass, String baseUrl) {
         RestAdapter.Builder builder = new RestAdapter.Builder()
                 .setEndpoint(baseUrl)
-                .setClient(new OkClient(new OkHttpClient()));
+                .setClient(new OkClient(new OkHttpClient())).setLogLevel(RestAdapter.LogLevel.FULL).setLog(new AndroidLog("Prueba json"));
 
         RestAdapter adapter = builder.build();
 

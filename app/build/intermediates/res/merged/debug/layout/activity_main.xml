@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5fb0c9"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     android:scrollbarAlwaysDrawVerticalTrack="true">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginTop="22dp"
         android:gravity="center_horizontal"
-        android:text= "Login"
+        android:text= ""
         android:textColor="#fff"
         android:textSize="26sp"
         android:textStyle="bold" />
@@ -43,8 +43,7 @@
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-
-
+                    android:drawableLeft="@drawable/user"
                     android:singleLine="true"
                     android:hint="User Name"
                     android:inputType="textEmailAddress" />
@@ -59,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:singleLine="true"
-
+                    android:drawableLeft="@drawable/lock"
                     android:hint="Password"
                     android:inputType="numberPassword" />
             </android.support.design.widget.TextInputLayout>
@@ -69,13 +68,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"
-                android:background="#d67601"
                 android:text="Iniciar Sesión"
+                android:background="@color/colorAccent"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp" />
         </LinearLayout>
     </RelativeLayout>
+
 
     <ImageButton
         android:id="@+id/user_profile_photo"
@@ -86,5 +86,5 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/user_profile_image_background"
         android:elevation="4dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/loginuser" />
 </RelativeLayout>

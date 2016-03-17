@@ -9,6 +9,7 @@ public class RestClient {
     //private static String ROOT = "http://192.168.1.69/sorteo/public/";
     //private static String ROOT = "http://192.168.3.30:8080/kairos/api/";
     private static String ROOT = "http://104.45.238.146/encuestas/index.php/admin/remotecontrol";
+
     static{
         setupRestClient();
     }

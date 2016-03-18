@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Encuestas</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_item_download">Descargar encuesta</string>
+    <string name="nav_item_images">Cambiar encuesta</string>
+    <string name="nav_item_location">Mis ubicaciones</string>
+    <string name="nav_sub_menu">Sub Menu</string>
+    <string name="nav_sub_menu_item01">Configuraciones</string>
+    <string name="nav_sub_menu_item02">Configuraciones</string>
+    <string name="drawer_header_text">Configuraciones</string>
 </resources>

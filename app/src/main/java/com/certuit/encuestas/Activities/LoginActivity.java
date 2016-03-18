@@ -1,9 +1,12 @@
 package com.certuit.encuestas.Activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.certuit.encuestas.R;
 import com.certuit.encuestas.Util.RestClient;
@@ -19,14 +22,22 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_activity);
 
         new verificarLoginAsyncTask().execute();
+        Button btnIniciarSesion = (Button) findViewById(R.id.btnIniciarSesion);
+        btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, Menu_principal.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

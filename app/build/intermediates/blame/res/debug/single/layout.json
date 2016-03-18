@@ -44,6 +44,10 @@
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_screen_simple.xml"
     },
     {
+        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/login_activity.xml",
+        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/layout/login_activity.xml"
+    },
+    {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_action_mode_close_item_material.xml"
     },
@@ -66,6 +70,10 @@
     {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/menu_main.xml",
+        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/layout/menu_main.xml"
     },
     {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
@@ -116,10 +124,6 @@
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/layout/activity_main.xml"
-    },
-    {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/select_dialog_multichoice_material.xml"
     },
@@ -130,6 +134,10 @@
     {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/drawer_header.xml",
+        "source": "/Users/Ivane/Desktop/Encuestas/app/src/main/res/layout/drawer_header.xml"
     },
     {
         "merged": "/Users/Ivane/Desktop/Encuestas/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
